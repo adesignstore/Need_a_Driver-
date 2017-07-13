@@ -1,1 +1,93 @@
-print "hello"
+print " Greetings, dear customer Thank you so much for your visit !"
+Print " BUMBER DELIVERY SERVICES"
+print """
+We Can Help you with Delivery !
+
+      ++++
+     /  __\          ++++                     
+     \( oo          (___ \                     
+     _\_o/           oo~)/
+    / \|/ \         _\-_/_
+   / / __\ \___    / \|/  \
+   \ \|   |__/_)  / / .- \ \
+    \/_)  |       \ \ .  /_/
+     ||___|        \/___(_/
+     | | |          | |  |
+     | | |          | |  |
+     |_|_|          |_|__|
+     [__)_)        (_(___] 
+     
+"""
+     
+print " We will help you to choose Vehicle & Driver."
+print " Looking Bicycle, Car or Cargo Van ? Easy as 1,2,3 ...  "
+# constantas 
+a_rate = 20
+c_rate = 60
+b_rate = 40
+
+client_name = raw_input(" Please, type your name ")
+client_name = client_name.upper()
+adress_from = raw_input (" Please, type full adreess from where we need pick up your package .... ")
+zipcode_from = raw_input( " please provide zip code of your location , type only numbers ....")
+zipcode_from = int(zipcode_from)
+adress_to = raw_input(" Please, type full adrees wher ewe need drop your package ....")
+zipcode_to = raw_input(" Please, provide destination zip code, type only numbers ....")
+zipcode_to = int(zipcode_to)
+dist_zip = zipcode_from - zipcode_to
+print dist_zip
+client_box_options = """
+
+   What size of boxes do you have ? :
+
+    A. Small Box / Boxes : size less 100"
+
+    B. Medium size Box / Boxes : size over 100"
+
+    C. Large size Box / Boxes : size over 250" 
+    
+    D. Extra Large Box/ Boxes : size over 400" 
+
+"""
+while True:
+
+        answer = raw_input(client_box_options)
+
+        answer = answer.upper()
+
+        if answer == "A":
+            qty_small = raw_input ( " How many Small boxes do you Have? ")
+            qty_small = int(qty_small)
+            print "Here your delivery cost $ ..." 
+                 
+            a_price_cost = qty_small * dist_zip * a_rate
+            print a_price_cost
+
+    
+
+        elif answer == "B":
+            qty_med = raw_input ( " How many Medium boxes do you Have? ")
+            qty_med = int(qty_med)
+            print " Here your delivery cost $ ..." 
+                 
+            b_price_cost = qty_med * dist_zip * b_rate
+            print b_price_cost
+
+            
+
+        elif answer == "C":
+            qty_lar = raw_input ( " How many Large boxes do you Have? ")
+            qty_lar = int(qty_lar)
+            print " Here your delivery cost $ ..." 
+                 
+            c_price_cost = qty_lar * dist_zip * c_rate
+            print c_price_cost
+
+          
+
+
+        else:
+
+            print " Sorry, you need find Truck Delivery Company, please call 888-TRUCKON ?" 
+            break
+        
