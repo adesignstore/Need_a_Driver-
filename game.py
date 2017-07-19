@@ -1,7 +1,15 @@
 print " Greetings, dear customer Thank you so much for your visit !"
 print " BUMBER DELIVERY SERVICES "
+# boxA small box 
+# boxB medium box 
+# boxC large size box 
+
+#3 diferent vehicle deliveries and 3 diferent size of boxes we need find what vehicle shoudl we use it
+
 print """
 We Can Help you with Delivery !
+
+
 
       ++++
      /  __\          ++++                     
@@ -22,16 +30,16 @@ We Can Help you with Delivery !
 print " We will help you to choose Vehicle & Driver."
 print " Looking Bicycle, Car or Cargo Van ? Easy as 1,2,3 ...  "
 # constantas 
-a_rate = 20
-c_rate = 60
-b_rate = 40
+a_rate = 3
+c_rate = 6
+b_rate = 9
 
 client_name = raw_input(" Please, type your name ")
 client_name = client_name.upper()
 adress_from = raw_input (" Please, type full adreess from where we need pick up your package .... ")
 zipcode_from = raw_input( " please provide zip code of your location , type only numbers ....")
 zipcode_from = int(zipcode_from)
-adress_to = raw_input(" Please, type full adrees wher ewe need drop your package ....")
+adress_to = raw_input(" Please, type full adrees where we need drop your package ....")
 zipcode_to = raw_input(" Please, provide destination zip code, type only numbers ....")
 zipcode_to = int(zipcode_to)
 dist_zip = zipcode_from - zipcode_to
@@ -58,10 +66,11 @@ while True:
         if answer == "A":
             qty_small = raw_input ( " How many Small boxes do you Have? ")
             qty_small = int(qty_small)
-            print "Here your delivery cost $ ..." 
-                 
+            print "Here your delivery cost $ ..."
+            
             a_price_cost = qty_small * dist_zip * a_rate
-            print a_price_cost
+            print a_price_cost 
+            print " " +  "Dear" + client_name + " Bicycle Driver on His Way"
             print """
                                                 $"   *.      
               d$$$$$$$P"                  $    J
@@ -177,3 +186,8 @@ $       $$$$$       $   4$$$$$$$     L       *$$$"      4
                   """
             break
         
+        
+print "Dear" + client_name + " ! " 
+print " Thank you so much for your business with us! We really Happy to help you " 
+print " Will be delivered from " + adress_from + " to" + "  "  + adress_to 
+print " You will receive delivery link via email in next 2-10 minutes"
