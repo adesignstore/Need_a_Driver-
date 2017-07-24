@@ -1,4 +1,5 @@
-print " Greetings, dear customer Thank you so much for your visit !"
+print " Greetings, dear customer !"
+print " Thank you so much for your visit !"
 print " BUMBER DELIVERY SERVICES "
 # boxA small box 
 # boxB medium box 
@@ -33,17 +34,25 @@ print " Looking Bicycle, Car or Cargo Van ? Easy as 1,2,3 ...  "
 a_rate = 3
 c_rate = 6
 b_rate = 9
-
+#rates need to check cost and fees added 
 client_name = raw_input(" Please, type your name ")
 client_name = client_name.upper()
 adress_from = raw_input (" Please, type full adreess from where we need pick up your package .... ")
-zipcode_from = raw_input( " please provide zip code of your location , type only numbers ....")
+zipcode_from = raw_input( " Please, provide zip code of your location , type only numbers ....")
 zipcode_from = int(zipcode_from)
-adress_to = raw_input(" Please, type full adrees where we need drop your package ....")
+adress_to = raw_input(" Please, type full adreess where we need drop your package ....")
 zipcode_to = raw_input(" Please, provide destination zip code, type only numbers ....")
 zipcode_to = int(zipcode_to)
-dist_zip = zipcode_from - zipcode_to
+
+if zipcode_from > zipcode_to:
+   dist_zip = zipcode_from - zipcode_to
+elif zipcode_from < zipcode_to:
+   dist_zip = zipcode_to - zipcode_from
+else: 
+    dist_zip = 1 
+
 print dist_zip
+
 client_box_options = """
 
    What size of boxes do you have ? :
@@ -55,6 +64,8 @@ client_box_options = """
     C. Large size Box / Boxes : size over 250" 
     
     D. Extra Large Box/ Boxes : size over 400" 
+
+Please, type only A, B, C or D 
 
 """
 while True:
@@ -70,7 +81,9 @@ while True:
             
             a_price_cost = qty_small * dist_zip * a_rate
             print a_price_cost 
-            print " " +  "Dear" + client_name + " Bicycle Driver on His Way"
+            print " " +  "Dear  " + client_name + " Bicycle Driver on His Way"
+            print " Will be delivered from " + adress_from + " to" + "  "  + adress_to 
+            print " You will receive delivery link via email in next 2-10 minutes"
             print """
                                                 $"   *.      
               d$$$$$$$P"                  $    J
@@ -104,6 +117,9 @@ $       $$$$$       $   4$$$$$$$     L       *$$$"      4
                  
             b_price_cost = qty_med * dist_zip * b_rate
             print b_price_cost
+            print " " +  "Dear  " + client_name + " Vehicle Driver on His Way"
+            print " Will be delivered from " + adress_from + " to" + "  "  + adress_to 
+            print " You will receive delivery link via email in next 2-10 minutes"
             print """
                                   ___..............._
              __.. ' _'.""""""\\""""""""- .`-._
@@ -119,6 +135,9 @@ $       $$$$$       $   4$$$$$$$     L       *$$$"      4
           `_____                                              ADESIGNSTORE.COM
             
             """
+            print """  Dear" + "  " +  client_name + " ! " + " Thank you so much for your business with us! We really Happy to help you " 
+            " Will be delivered from " + adress_from + " to" + "  "  + adress_to 
+            " You will receive delivery link via email in next 2-10 minutes"""
 
             
 
@@ -129,6 +148,9 @@ $       $$$$$       $   4$$$$$$$     L       *$$$"      4
                  
             c_price_cost = qty_lar * dist_zip * c_rate
             print c_price_cost
+            print " " +  "Dear  " + client_name + " Cargo Van Driver  on His Way"
+            print " Will be delivered from " + adress_from + " to" + "  "  + adress_to 
+            print " You will receive delivery link via email in next 2-10 minutes"
             print """
                                                           ____
                              ______...-----'_'____\.
@@ -186,6 +208,9 @@ $       $$$$$       $   4$$$$$$$     L       *$$$"      4
                   """
             break
         
+ 
+ 
+ 
         
 print "Dear" + client_name + " ! " 
 print " Thank you so much for your business with us! We really Happy to help you " 
